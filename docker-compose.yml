@@ -10,7 +10,6 @@ services:
       - --innodb_force_recovery=0
     volumes: 
       - ./.docker/volumes/db:/var/lib/mysql
-    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: learnsql
