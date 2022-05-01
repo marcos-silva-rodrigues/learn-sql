@@ -47,4 +47,10 @@ insert into profiles (bio, description, user_id)
 select concat('Bio de ', first_name), concat('Description de ', first_name), id 
 from users;
 
+-- Select with other tables
+select u.id as uid, p.id as pid from users as u, profiles as p;
+
+select u.id as uid, p.id as pid, u.first_name, p.bio 
+from users as u, profiles as p where u.id = p.user_id;
+
 
